@@ -20,7 +20,7 @@ public class Account {
     private String email;
 
 
-    @OneToMany(mappedBy = "account")
+    @OneToMany(mappedBy = "account",fetch = FetchType.EAGER)
     @JsonManagedReference
     private Set<Address> addresses = new HashSet<Address>();
 
