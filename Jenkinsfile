@@ -7,5 +7,10 @@ pipeline {
              sh './gradlew clean build'
           }
        }
+       stage('Deploy'){
+                  steps{
+                      sh 'cf push account-address-service -p ./build/libs/account-address-service-0.0.1-SNAPSHOT.jar --no-start'
+                  }
+              }
     }
 }
