@@ -1,7 +1,6 @@
 package com.solstice.accountaddressservice.domain;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.sun.deploy.uitoolkit.impl.awt.AWTPluginUIToolkit;
 
 import javax.persistence.*;
 
