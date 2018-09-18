@@ -34,13 +34,7 @@ public class AccountService {
 
     public Account updateAccount(long id, Account account) {
 
-        Account updatedAccount = accountRepository.findById(id).get();
-        updatedAccount.setFirstName(account.getFirstName());
-        updatedAccount.setAddresses(account.getAddresses());
-        updatedAccount.setEmail(account.getEmail());
-        updatedAccount.setLastName(account.getLastName());
-
-        return accountRepository.save(updatedAccount);
+        return accountRepository.save(account);
     }
 
     public void deleteAccount(long id) {

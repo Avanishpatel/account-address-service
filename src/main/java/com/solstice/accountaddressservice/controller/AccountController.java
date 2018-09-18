@@ -57,7 +57,7 @@ public class AccountController {
 
     @DeleteMapping("/{id}")
     @HystrixCommand(fallbackMethod = "deleteAccountFallback")
-    public void deleteAccount(@PathVariable("id") long id) {
+    public void deleteAccount(@PathVariable("id") Long id) {
 
         accountService.deleteAccount(id);
         logger.info("Account deleted.");
