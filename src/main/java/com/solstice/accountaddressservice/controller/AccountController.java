@@ -50,9 +50,9 @@ public class AccountController {
 
     @PutMapping("/{id}")
     @HystrixCommand(fallbackMethod = "updateAccountFallback")
-    public Account updateAccount(@RequestBody Account account) {
+    public Account updateAccount(@PathVariable("id") long accountId, @RequestBody Account account) {
         logger.info("Account updated"+ account.toString());
-        return accountService.updateAccount(account);
+        return accountService.updateAccount(accountId, account);
     }
 
     @DeleteMapping("/{id}")
