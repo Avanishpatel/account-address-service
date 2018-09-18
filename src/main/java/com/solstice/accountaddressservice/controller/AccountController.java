@@ -83,7 +83,7 @@ public class AccountController {
         return new Address();
     }
 
-    public Account updateAccountFallback(Account account) {
+    public Account updateAccountFallback(long id,Account account) {
         logger.error("Fallback while updating account");
         return new Account();
     }

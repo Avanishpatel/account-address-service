@@ -39,7 +39,7 @@ public class AccountService {
         updatedAccount.setAddresses(account.getAddresses());
         updatedAccount.setEmail(account.getEmail());
         updatedAccount.setLastName(account.getLastName());
-        
+
         return accountRepository.save(updatedAccount);
     }
 
